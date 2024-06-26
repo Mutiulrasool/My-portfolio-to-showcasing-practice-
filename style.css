@@ -1,14 +1,25 @@
+:root {
+    --primary-color: #254336;
+    --secondary-color: #6B8A7A;
+    --background-color: #DAD3BE;
+
+}
+
 body {
-    background-color: #F0F0F0;
+    background-color: var(--background-color);
 }
 
 #header-container {
-    color: white;
-    background-color: #2C3E50;
-    position: sticky;
+    background-color: var(--primary-color);
+    position:fixed;
     border-radius: 5px;
+    width: 100%;
+    z-index: 1;
 }
 
+/* @media (max-width:786) {
+    
+} */
 nav {
     padding: 5px;
     display: flex;
@@ -18,37 +29,23 @@ nav {
 }
 
 nav div ul {
+    color: #DAD3BE;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     padding: auto;
     justify-content: center;
-    /* margin: auto; */
     gap: 1em;
     font-size: large;
 }
-/* nav li:hover {
-    cursor: pointer;
-} */
-
-/* a{
-    color: #F0F0F0;
-    text-decoration: none;
-    /* width: 100%; */
-/* }  */
-/* a:hover{
-    text-decoration: underline;
-    transition: text-decoration 1s;
-    transition-duration: 2s;
-
-} */
 
 a {
+    color: var(--background-color);
     position: relative;
     text-decoration: none;
-    color: #F0F0F0;
     padding: 0 5px;
 }
+
 a::after {
     content: '';
     position: absolute;
@@ -60,10 +57,177 @@ a::after {
     transform: translate(-50%);
     background: currentColor;
     transition: width 0.3s ease;
-
 }
 
 a:hover::after {
     width: 100%;
 }
- 
+
+.section-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.section-1-div1 {
+    width: 45%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: block;
+    /* margin-left: 50px; */
+    font-size: larger;
+    color: var(--primary-color);
+}
+
+h2>span {
+    color: #6B8A7A;
+    font-size: 1.5em;
+}
+
+.section-1-div2 {
+    width: 45%;
+    height: auto;
+    /* border: 1px solid black; */
+
+}
+
+img {
+    border: none;
+    border-radius: 8px;
+    width: 50%;
+    height: auto;
+
+    margin-left: 15%;
+}
+
+@media (max-width: 786px) {
+
+    .section-1-div1,
+    .section-1-div2 {
+        width: 100%;
+        /* margin: 5px 0; */
+        text-align: center;
+    }
+    #header-container{
+        position: static;
+    }
+    img {
+        margin: 0;
+    }
+}
+
+/* .sec-2 {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    display: block;
+    justify-content: center;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    } */
+.sec-2-d, .sec-3-d {
+    /* background-color: var(--secondary-color); */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#Assignments, #css {
+    border-radius: 50px;
+    width: 30%;
+    height: auto;
+    padding: 12px 18px;
+    /* border: 1px solid var(--primary-color); */
+    font-size: x-large;
+    color: var(--secondary-color);
+    font-weight: bold;
+    background-color: var(--primary-color);
+}
+
+  @media (max-width:780px) {
+    #Assignments{
+        width: 45%;
+    }
+}
+@media (max-width:480px) {
+    #Assignments{
+        width: 60%;
+        font-size: large;
+    }
+}
+.sec2-d-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    height: auto;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.card-d {
+    width: 30%;
+    height: auto;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding: 8px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+    color: #6B8A7A;
+
+}
+
+@media (max-width: 786px) {
+    .card-d{
+        width: 45%;
+    }
+}
+@media (max-width: 480px) {
+     .sec2-d-2{
+        margin-bottom: 0px;
+    } 
+     .card-d{
+         width: 100%;
+         margin-bottom: 5px;   
+    }
+}
+.card-d:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    /* background-color: #254336; */
+}
+
+.card-d span {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-weight: bold;
+    /* margin-top: 100%; */
+}
+
+.assignment-btn {
+    margin-top: 20px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    width: 80%;
+    height: auto;
+    font-size: large;
+    padding: 5px;
+    /* border: 2px solid var(--primary-color); */
+    border-radius: 50px;
+    border: 2px solid var(--secondary-color);
+}
+
+.assignment-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+h4 {
+    color: var(--secondary-color);
+}

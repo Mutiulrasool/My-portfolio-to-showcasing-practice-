@@ -20,16 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
         b.add(option3);
         a.appendChild(b);
         b.style.margin = "5px 5px";
-        b.addEventListener("change", function() {
+        b.addEventListener("change", function () {
             var selectedValue = b.value;
             if (selectedValue) {
                 window.location.href = selectedValue;
             }
         });
+        document.addEventListener("click", function (event) {
+            if (!a.contains(event.target)) {
+                let headerDropdown = a.querySelector("select");
+                if (headerDropdown) {
+                    a.removeChild(headerDropdown);
+                }
+            }
+        });
+         b.style.padding= "4px";
+         b.style.background= "#254336";
+         b.style.color= "#DAD3BE";
+         b.style.fontWeight= "bold";
+         b.style.border= "none"
+         
+        
     }
     document.getElementById("dropdown-li").addEventListener("click", myFunction);
 
-
+    
 
 
 
