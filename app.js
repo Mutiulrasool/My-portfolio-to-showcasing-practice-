@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = selectedValue;
             }
         });
-        document.addEventListener("click", function (event) {
+        document.addEventListener("mouseout", function (event) {
             if (!a.contains(event.target)) {
                 let headerDropdown = a.querySelector("select");
                 if (headerDropdown) {
@@ -39,16 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
          b.style.color= "#DAD3BE";
          b.style.fontWeight= "bold";
          b.style.border= "none"
+
          
         
     }
-    document.getElementById("dropdown-li").addEventListener("click", myFunction);
-
-    
-
-
-
-
-
+    document.getElementById("dropdown-li").addEventListener("mouseover", myFunction);
 
 })
