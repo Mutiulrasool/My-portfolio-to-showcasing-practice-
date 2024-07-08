@@ -2,8 +2,9 @@
     --primary-color: #254336;
     --secondary-color: #6B8A7A;
     --background-color: #DAD3BE;
-    
+
 }
+
 i {
     color: #6B8A7A;
 }
@@ -19,7 +20,29 @@ body {
     border-radius: 5px;
     width: 100%;
     z-index: 10000;
+}
+
+.bars-inSmallScreen {
     display: none;
+}
+
+
+@media (max-width:786px) {
+    nav div:nth-child(2) {
+        display: none;
+    }
+
+    #left-onsmallerScreen {
+        float: left;
+    }
+
+    .bars-inSmallScreen {
+        display: flex;
+        justify-content: end;
+        margin-top: 30px;
+        font-weight: bolder;
+        color: var(--background-color);
+    }
 }
 
 
@@ -39,6 +62,10 @@ nav div ul {
     justify-content: center;
     gap: 1em;
     font-size: large;
+}
+
+nav div:nth-child(1) ul span {
+    text-align: left;
 }
 
 a {
@@ -72,7 +99,6 @@ a:hover::after {
     align-items: center;
     width: 80%;
     margin: auto;
-    /* border: 5px solid red; */
 }
 
 .section-1-div1 {
